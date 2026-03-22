@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המדריך ליצירת רפרנס דמות ב-AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #09090b; /* Zinc-950 */
+            color: #f4f4f5;
+        }
+        .accent-color { color: #ccff00; }
+        .bg-accent { background-color: #ccff00; color: #000; }
+        .glass-panel {
+            background: rgba(24, 24, 27, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <script>
+        const phoneData = {
+            "apple": [
+                { id: "ip_pro_max_new", name: "iPhone 15/16/17 Pro Max", lens: "עדשת 2x (חיתוך חיישן ראשי)", dist: "1.5 - 2 מטרים", note: "אל תשתמש בעדשת ה-5x, היא תדרוש ממך לעמוד רחוק מדי בתוך חדר." },
+                { id: "ip_pro_new", name: "iPhone 13/14/15/16 Pro", lens: "עדשת זום 3x", dist: "2 - 2.5 מטרים", note: "עדשה מעולה לפורטרטים, מונעת לחלוטין עיוות של הפנים." },
+                { id: "ip_base_new", name: "iPhone 13/14/15/16 (רגיל / Plus)", lens: "מצלמה ראשית 1x עם זום דיגיטלי 2x", dist: "1.5 - 2 מטרים", note: "התקרב מעט עם הזום הדיגיטלי כדי לא לקרב את הטלפון פיזית לפנים." },
+                { id: "ip_older", name: "iPhone 11/12 (כל הדגמים)", lens: "מצלמה ראשית (1x)", dist: "1.5 מטרים", note: "הקפד לעמוד בדיוק במרכז הפריים כדי למנוע עיוות שוליים." }
+            ],
+            "samsung": [
+                { id: "sam_ultra_new", name: "Galaxy S23/S24/S25/S26 Ultra", lens: "עדשת טלפוטו 3x", dist: "2 - 2.5 מטרים", note: "העדשה הטובה ביותר בסדרה לצילומי פנים ללא עיוות." },
+                { id: "sam_ultra_old", name: "Galaxy S21/S22 Ultra", lens: "עדשת טלפוטו 3x", dist: "2 מטרים", note: "ודא שהפוקוס ננעל על העיניים לפני הצילום." },
+                { id: "sam_base", name: "Galaxy S21 עד S26 (רגיל / Plus)", lens: "מצלמה ראשית (זום 2x אם קיים, אחרת 1x)", dist: "1.5 - 2 מטרים", note: "אם יש כפתור 2x במסך, השתמש בו והתרחק מעט." }
+            ],
+            "pixel": [
+                { id: "pix_pro_new", name: "Pixel 8/9/10 Pro", lens: "מצב פורטרט (זום 2x)", dist: "1.5 - 2 מטרים", note: "האלגוריתם של גוגל יבצע חיתוך מושלם בעדשת ה-2x." },
+                { id: "pix_base", name: "Pixel 6/7/8/9 (רגיל)", lens: "מצלמה ראשית (זום 2x מבוסס AI)", dist: "1.5 מטרים", note: "התרחק מהמכשיר והשתמש בזום הדיגיטלי החכם." }
+            ],
+            "xiaomi": [
+                { id: "xiaomi_ultra", name: "Xiaomi 13/14/15/16 Ultra", lens: "עדשת טלפוטו 3.2x / 75mm", dist: "2.5 מטרים", note: "עדשה אופטית מעולה שנועדה בדיוק לצילומי תדמית." },
+                { id: "xiaomi_base", name: "Xiaomi סדרה רגילה", lens: "מצלמה ראשית עם זום 2x", dist: "1.5 - 2 מטרים", note: "שמור על תאורה חזקה כדי לפצות על הזום הדיגיטלי." }
+            ]
+        };
+
+        function updateModels() {
+            const brand = document.getElementById('brand-select').value;
+            const modelSelect = document.getElementById('model-select');
+            const instructions = document.getElementById('phone-instructions');
+            
+            modelSelect.innerHTML = '<option value="" disabled selected>בחר דגם ספציפי</option>';
+            instructions.classList.add('hidden');
+
+            if (brand && phoneData[brand]) {
+                phoneData[brand].forEach(phone => {
+                    const option = document.createElement('option');
+                    option.value = phone.id;
+                    option.textContent = phone.name;
+                    modelSelect.appendChild(option);
+                });
+                modelSelect.disabled = false;
+            } else {
+                modelSelect.disabled = true;
+            }
+        }
+
+        function showInstructions() {
+            const brand = document.getElementById('brand-select').value;
+            const modelId = document.getElementById('model-select').value;
+            const instructions = document.getElementById('phone-instructions');
+            
+            const phone = phoneData[brand].find(p => p.id === modelId);
+            
+            if (phone) {
+                document.getElementById('inst-lens').textContent = phone.lens;
+                document.getElementById('inst-dist').textContent = phone.dist;
+                document.getElementById('inst-note').textContent = phone.note;
+                instructions.classList.remove('hidden');
+            }
+        }
+    </script>
+</head>
+<body class="antialiased min-h-screen flex flex-col items-center">
+
+    <header class="w-full max-w-5xl px-6 py-16 text-center">
+        <h1 class="text-5xl font-black mb-4 uppercase tracking-tight">AI Character <span class="accent-color">Reference</span></h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">המדריך המלא לצילום עצמי בסמארטפון ליצירת תאום דיגיטלי וגיליונות דמות (Soul ID) ברמה קולנועית.</p>
+    </header>
+
+    <section class="w-full max-w-4xl px-6 mb-16">
+        <div class="glass-panel rounded-2xl p-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">1</span>
+                הגדרות המצלמה שלך
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <label class="block text-sm text-gray-400 mb-2">יצרן הטלפון</label>
+                    <select id="brand-select" onchange="updateModels()" class="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-[#ccff00]">
+                        <option value="" disabled selected>בחר יצרן</option>
+                        <option value="apple">Apple (iPhone)</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="pixel">Google Pixel</option>
+                        <option value="xiaomi">Xiaomi</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-400 mb-2">דגם</label>
+                    <select id="model-select" onchange="showInstructions()" disabled class="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-[#ccff00]">
+                        <option value="" disabled selected>בחר דגם ספציפי</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="phone-instructions" class="hidden bg-gray-900 border border-gray-700 rounded-xl p-6">
+                <h3 class="text-lg font-bold mb-4 accent-color">הנחיות ספציפיות למכשיר שלך:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <span class="block text-xs text-gray-400 uppercase tracking-wider mb-1">עדשה מומלצת</span>
+                        <strong id="inst-lens" class="text-lg"></strong>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <span class="block text-xs text-gray-400 uppercase tracking-wider mb-1">מרחק עמידה</span>
+                        <strong id="inst-dist" class="text-lg"></strong>
+                    </div>
+                </div>
+                <p id="inst-note" class="mt-4 text-sm text-gray-400 border-r-2 border-[#ccff00] pr-3"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full max-w-4xl px-6 mb-16">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+            <span class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">2</span>
+            כללי הצילום בבית
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="glass-panel p-6 rounded-2xl">
+                <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_camera.jpg" alt="מצלמה אחורית" class="w-full h-48 object-cover rounded-lg mb-4 opacity-50">
+                <h3 class="font-bold text-xl mb-2">מצלמה אחורית בלבד</h3>
+                <p class="text-gray-400 text-sm">לעולם אל תשתמש במצלמת הסלפי (הקדמית). היא בעלת עדשה רחבה שמעוותת את מבנה הפנים. הצב את הטלפון כשהמסך פונה לקיר, והיעזר במראה קטנה מאחוריו אם אתה חייב לראות את הפריים.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl">
+                <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_height.jpg" alt="גובה העיניים" class="w-full h-48 object-cover rounded-lg mb-4 opacity-50">
+                <h3 class="font-bold text-xl mb-2">גובה העיניים בדיוק</h3>
+                <p class="text-gray-400 text-sm">עדשת המצלמה חייבת להיות בקו ישר לחלוטין עם העיניים שלך. זווית נמוכה (מלמטה למעלה) תגדיל את הסנטר, וזווית גבוהה תעוות את המצח. כוון את הגובה לפני הצילום.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl">
+                <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_light.jpg" alt="תאורת חלון" class="w-full h-48 object-cover rounded-lg mb-4 opacity-50">
+                <h3 class="font-bold text-xl mb-2">תאורת חלון טבעית</h3>
+                <p class="text-gray-400 text-sm">כבה את כל האורות בחדר (כדי למנוע עירוב צבעים). עמוד מול חלון גדול ביום, סובב את הגוף בזווית קלה (45 מעלות) לחלון כך שצד אחד של הפנים מואר היטב והצד השני עם צל עדין ורך.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl">
+                <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_setup.jpg" alt="יציבות והגדרות" class="w-full h-48 object-cover rounded-lg mb-4 opacity-50">
+                <h3 class="font-bold text-xl mb-2">טיימר ויציבות</h3>
+                <p class="text-gray-400 text-sm"><strong>חובה לכבות מצב Live Photo.</strong> השתמש בטיימר של 10 שניות כדי שתוכל להיכנס לפוזיציה יציבה. אין לך חצובה? השען את הטלפון על כוס קפה כבדה או ערימת ספרים בגובה הנכון, וקבע אותו בעזרת גומייה אם צריך.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full max-w-4xl px-6 mb-24">
+        <div class="glass-panel rounded-2xl p-8 text-center shadow-2xl border-t-4 border-[#ccff00]">
+            <h2 class="text-2xl font-bold mb-4">מוכן? העלה את התמונות שלך</h2>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">וודא שצילמת 7 זוויות: גוף מלא (קדימה, צדדים, אחור) וקלוז-אפ פנים (קדימה, צדדים). הקבצים יישלחו ישירות למייל שלך לשימוש ב-AI.</p>
+            
+            <div class="w-full bg-gray-900 rounded-xl overflow-hidden min-h-[500px] flex items-center justify-center border border-gray-800">
+                <p class="text-gray-500">[ כאן יוטמע קוד ה-iframe של Jotform ]</p>
+                </div>
+        </div>
+    </section>
+
+</body>
+</html>
