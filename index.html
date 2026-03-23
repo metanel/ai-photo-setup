@@ -5,34 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>מדריך צילום רפרנס AI | יצירת תאום דיגיטלי מקצועי בסמארטפון</title>
-    <meta name="description" content="המדריך הפרקטי והמדויק ביותר לצילום עצמי בסמארטפון עבור אימון מודלים בבינה מלאכותית (Soul ID). 5 שלבים פשוטים להשגת תוצאה קולנועית ללא עיוותים.">
-    <meta name="keywords" content="AI, צילום בסמארטפון, גיליון דמות, Soul ID, תאום דיגיטלי, בינה מלאכותית, רפרנס דמות, הדרכת וידאו">
+    <title>יוצרים את דף הדמות שלכם (AI) | המדריך המלא</title>
+    <meta name="description" content="המדריך הפשוט והידידותי לצילום עצמי בסמארטפון עבור אימון בינה מלאכותית. 5 שלבים קלים להשגת תאום דיגיטלי מושלם.">
+    <meta name="keywords" content="AI, צילום בסמארטפון, גיליון דמות, תאום דיגיטלי, בינה מלאכותית, מדריך מצולם">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yourdomain.com/">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="המדריך המלא ליצירת רפרנס דמות ב-AI">
-    <meta property="og:description" content="כך תצלמו את עצמכם נכון עבור סרטי AI. מדריך וידאו צעד אחר צעד המותאם לסמארטפון שלכם.">
+    <meta property="og:title" content="יוצרים את דף הדמות שלכם (AI) 🎨">
+    <meta property="og:description" content="כך תצלמו את עצמכם בקלות עבור בינה מלאכותית. מדריך וידאו קצר וידידותי לכל המשפחה.">
     <meta property="og:image" content="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_og.jpg">
-    <meta property="og:image:alt" content="תצוגה מקדימה של המדריך לצילום רפרנס AI">
+    <meta property="og:image:alt" content="תצוגה מקדימה של המדריך לצילום רפרנס">
     <meta property="og:url" content="https://yourdomain.com/">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="המדריך המלא ליצירת רפרנס דמות ב-AI">
-    <meta name="twitter:description" content="המדריך המקיף לצילום עצמי בסמארטפון עבור אימון מודלים בבינה מלאכותית ויצירת תאום דיגיטלי מושלם.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_og.jpg">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Heebo', sans-serif; background-color: #09090b; color: #f4f4f5; scroll-behavior: smooth; }
-        .accent-color { color: #ccff00; }
-        .bg-accent { background-color: #ccff00; color: #000; }
-        .glass-panel { background: rgba(24, 24, 27, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .why-box { background-color: rgba(0, 0, 0, 0.4); border-right: 4px solid #ccff00; }
-        video { border-radius: 1rem; width: 100%; height: auto; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            background-color: #F8FAFC; /* רקע בהיר ורך (Slate 50) */
+            color: #1E293B; /* טקסט כהה לקריאות מקסימלית (Slate 800) */
+            scroll-behavior: smooth; 
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+        .bg-accent-light { background-color: #EEF2FF; color: #4F46E5; } /* תכלת-סגול רך לאלמנטים בולטים */
+        .border-accent { border-color: #818CF8; }
+        video { 
+            border-radius: 1.25rem; 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 9/16; 
+            object-fit: cover; 
+            background: #E2E8F0; 
+        }
     </style>
     
     <script>
@@ -108,7 +116,7 @@
             const modelSelect = document.getElementById('model-select');
             const instructions = document.getElementById('phone-instructions');
             
-            modelSelect.innerHTML = '<option value="" disabled selected>בחר דגם ספציפי</option>';
+            modelSelect.innerHTML = '<option value="" disabled selected>בחרו דגם ספציפי</option>';
             instructions.classList.add('hidden');
             instructions.setAttribute('aria-hidden', 'true');
 
@@ -144,26 +152,27 @@
         }
     </script>
 </head>
-<body class="antialiased flex flex-col items-center">
+<body class="antialiased flex flex-col items-center pb-12">
 
     <main class="w-full flex flex-col items-center">
         
-        <header class="w-full max-w-5xl px-6 py-16 text-center">
-            <h1 class="text-5xl md:text-6xl font-black mb-4 uppercase tracking-tighter">AI Character <span class="accent-color">Reference</span></h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">מדריך הוידאו המלא לצילום עצמי מושלם עבור אימון מודל ה-AI שלך.</p>
+        <header class="w-full max-w-5xl px-6 py-12 md:py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 text-indigo-900 tracking-tight">יוצרים את דף הדמות שלכם 🎨</h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-medium">המדריך המלא, הפשוט והידידותי לצילום עצמי מושלם עבור אימון הבינה המלאכותית שלכם.</p>
         </header>
 
-        <section aria-labelledby="camera-settings-heading" class="w-full max-w-4xl px-6 mb-12">
-            <div class="glass-panel rounded-3xl p-8 shadow-2xl border-r-4 border-[#ccff00]">
-                <h2 id="camera-settings-heading" class="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span aria-hidden="true" class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">1</span>
-                    הגדרת המצלמה שלך
+        <section aria-labelledby="camera-settings-heading" class="w-full max-w-2xl px-6 mb-10">
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 id="camera-settings-heading" class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">1</span>
+                    📱 בואו נגדיר את המצלמה
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div>
-                        <label for="brand-select" class="block text-sm text-gray-400 mb-2">יצרן המכשיר</label>
-                        <select id="brand-select" onchange="updateModels()" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-[#ccff00]">
-                            <option value="" disabled selected>בחר יצרן</option>
+                        <label for="brand-select" class="block text-sm font-bold text-slate-600 mb-2">איזה טלפון יש לכם?</label>
+                        <select id="brand-select" onchange="updateModels()" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 font-medium">
+                            <option value="" disabled selected>בחרו יצרן</option>
                             <option value="apple">Apple (iPhone)</option>
                             <option value="samsung">Samsung (Galaxy)</option>
                             <option value="pixel">Google (Pixel)</option>
@@ -171,123 +180,125 @@
                         </select>
                     </div>
                     <div>
-                        <label for="model-select" class="block text-sm text-gray-400 mb-2">דגם ספציפי</label>
-                        <select id="model-select" onchange="showInstructions()" disabled aria-disabled="true" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-4 text-white focus:outline-none focus:border-[#ccff00]">
-                            <option value="" disabled selected>בחר דגם</option>
+                        <label for="model-select" class="block text-sm font-bold text-slate-600 mb-2">איזה דגם בדיוק?</label>
+                        <select id="model-select" onchange="showInstructions()" disabled aria-disabled="true" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 font-medium">
+                            <option value="" disabled selected>בחרו דגם</option>
                         </select>
                     </div>
                 </div>
-                <div id="phone-instructions" class="hidden bg-gray-900 rounded-2xl p-6 border border-gray-700" aria-live="polite" aria-hidden="true">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                        <div class="bg-gray-800 p-4 rounded-xl">
-                            <span class="text-xs text-gray-400 block uppercase mb-1">עדשה מומלצת</span>
-                            <strong id="inst-lens" class="text-lg accent-color"></strong>
+                
+                <div id="phone-instructions" class="hidden bg-indigo-50/50 rounded-2xl p-5 border border-indigo-100" aria-live="polite" aria-hidden="true">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+                        <div class="bg-white p-3 rounded-xl border border-indigo-50">
+                            <span class="text-xs text-indigo-400 font-bold block mb-1">🔍 עדשה מומלצת</span>
+                            <strong id="inst-lens" class="text-base text-indigo-900"></strong>
                         </div>
-                        <div class="bg-gray-800 p-4 rounded-xl">
-                            <span class="text-xs text-gray-400 block uppercase mb-1">מרחק מהמכשיר</span>
-                            <strong id="inst-dist" class="text-lg accent-color"></strong>
+                        <div class="bg-white p-3 rounded-xl border border-indigo-50">
+                            <span class="text-xs text-indigo-400 font-bold block mb-1">📏 מרחק מהמכשיר</span>
+                            <strong id="inst-dist" class="text-base text-indigo-900"></strong>
                         </div>
                     </div>
-                    <p id="inst-note" class="text-sm text-gray-300 border-r-2 border-[#ccff00] pr-3"></p>
+                    <p id="inst-note" class="text-sm text-slate-600 border-r-4 border-indigo-300 pr-3 font-medium bg-white/50 p-2 rounded"></p>
                 </div>
             </div>
         </section>
 
-        <section aria-label="שלבי צילום" class="w-full max-w-4xl px-6 space-y-12">
+        <section aria-label="שלבי צילום מצולמים" class="w-full max-w-2xl px-6 space-y-10">
             
-            <article class="glass-panel rounded-3xl overflow-hidden flex flex-col md:flex-row border-r-4 border-[#ccff00]">
-                <div class="md:w-1/2 p-1">
+            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                    <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">2</span>
+                    ☀️ התאורה והסביבה
+                </h2>
+                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
                     <video muted autoplay loop playsinline aria-label="וידאו הדרכה: התאורה והסביבה">
                         <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287906/IMG_2613_aeawsn.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="md:w-1/2 p-8 flex flex-col">
-                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                        <span aria-hidden="true" class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">2</span>
-                        התאורה והסביבה
-                    </h2>
-                    <p class="text-gray-300 mb-6">עמוד מול חלון גדול ביום (ללא שמש ישירה) כשמאחוריך קיר חלק. סובב את הפנים ב-45 מעלות לחלון לקבלת עומק קולנועי.</p>
-                    <div class="why-box p-4 rounded-xl text-sm italic mt-auto">
-                        <strong class="text-white">למה זה חשוב?</strong> תאורה "שטוחה" וטבעית מונעת מה-AI לפרש בטעות צללים חזקים תחת האף או הסנטר כחלק קבוע ממבנה הפנים שלך.
+                <div class="text-slate-700">
+                    <p class="text-lg font-medium mb-4">עמדו מול חלון גדול בשעות היום (בלי שמש ישירה לעיניים) כשמאחוריכם קיר חלק. סובבו את הפנים טיפה הצידה (בזווית של 45 מעלות) אל החלון.</p>
+                    <div class="bg-slate-50 border-r-4 border-amber-400 p-4 rounded-xl text-sm">
+                        <strong class="text-amber-700 block mb-1 text-base">למה זה כל כך חשוב? 🤔</strong>
+                        תאורה אחידה וטבעית מונעת צללים קשים (למשל מתחת לאף). ה-AI עלול להתבלבל ולחשוב שהצל הוא חלק ממבנה הפנים שלכם!
                     </div>
                 </div>
             </article>
 
-            <article class="glass-panel rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse border-r-4 border-[#ccff00]">
-                <div class="md:w-1/2 p-1">
+            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                    <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">3</span>
+                    ⚙️ הגדרות הצילום בטלפון
+                </h2>
+                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
                     <video muted autoplay loop playsinline aria-label="וידאו הדרכה: הגדרות צילום טכניות">
                         <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287885/IMG_2631_seo92e.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="md:w-1/2 p-8 flex flex-col">
-                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                        <span aria-hidden="true" class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">3</span>
-                        הגדרות צילום טכניות
-                    </h2>
-                    <ul class="space-y-3 text-gray-300 mb-6">
-                        <li>● <strong>מצלמה אחורית בלבד:</strong> איכות ודיוק פי 5 מהקדמית.</li>
-                        <li>● <strong>כיבוי Live Photo:</strong> חובה לקבלת פריים נקי.</li>
-                        <li>● <strong>ללא אפקט מראה (Mirror):</strong> צלם כפי שהעולם רואה אותך.</li>
+                <div class="text-slate-700">
+                    <ul class="space-y-2 mb-4 text-lg font-medium">
+                        <li>✅ <strong>מצלמה אחורית בלבד:</strong> היא הרבה יותר איכותית ממצלמת הסלפי.</li>
+                        <li>✅ <strong>לכבות Live Photo:</strong> אנחנו צריכים תמונה רגילה ונקייה.</li>
+                        <li>✅ <strong>בלי אפקט מראה (Mirror):</strong> צלמו רגיל, כמו שהעולם רואה אתכם.</li>
                     </ul>
-                    <div class="why-box p-4 rounded-xl text-sm italic mt-auto">
-                        <strong class="text-white">למה זה חשוב?</strong> הפנים שלנו אינן סימטריות. אם תשתמש באפקט מראה, ה-AI ימקם את תווי הפנים בצד ההפוך, מה שיגרום לדמות בוידאו להיראות "זרה" ולא אמינה.
+                    <div class="bg-slate-50 border-r-4 border-amber-400 p-4 rounded-xl text-sm">
+                        <strong class="text-amber-700 block mb-1 text-base">למה בלי מראה? 🤔</strong>
+                        הפנים שלנו לא סימטריות לחלוטין. אם נהפוך את התמונה, ה-AI ישים נקודות חן או תווי פנים בצד ההפוך, וזה ייראה פשוט "לא אתם".
                     </div>
                 </div>
             </article>
 
-            <article class="glass-panel rounded-3xl overflow-hidden flex flex-col md:flex-row border-r-4 border-[#ccff00]">
-                <div class="md:w-1/2 p-1">
+            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                    <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">4</span>
+                    📏 גובה וקיבוע המכשיר
+                </h2>
+                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
                     <video muted autoplay loop playsinline aria-label="וידאו הדרכה: גובה וקיבוע המכשיר">
                         <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287885/IMG_2632_r3p0i1.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="md:w-1/2 p-8 flex flex-col">
-                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                        <span aria-hidden="true" class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">4</span>
-                        גובה וקיבוע המכשיר
-                    </h2>
-                    <p class="text-gray-300 mb-6">הצב את המצלמה <strong>בדיוק בגובה העיניים</strong>. השתמש בטיימר של 10 שניות כדי שתוכל להתייצב ללא תנועה.</p>
-                    <div class="why-box p-4 rounded-xl text-sm italic mt-auto">
-                        <strong class="text-white">למה זה חשוב?</strong> זווית נמוכה או גבוהה מדי תגרום לו "לחשוב" שהלסת שלך רחבה מהרגיל או שהמצח גבוה מהרגיל, והדמות תצא מעוותת.
+                <div class="text-slate-700">
+                    <p class="text-lg font-medium mb-4">שימו את המצלמה <strong>בדיוק בגובה העיניים שלכם</strong> (אפשר להניח על ערימת ספרים). הפעילו טיימר של 10 שניות כדי שתוכלו לעמוד יציב בלי לזוז.</p>
+                    <div class="bg-slate-50 border-r-4 border-amber-400 p-4 rounded-xl text-sm">
+                        <strong class="text-amber-700 block mb-1 text-base">למה בגובה העיניים? 🤔</strong>
+                        המחשב לומד את מבנה הראש שלכם. צילום מלמטה יעשה לכם סנטר גדול מדי, וצילום מלמעלה יגדיל את המצח. אנחנו רוצים פרופורציות אמיתיות.
                     </div>
                 </div>
             </article>
 
-            <article class="glass-panel rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse border-r-4 border-[#ccff00]">
-                <div class="md:w-1/2 p-1">
+            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                    <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">5</span>
+                    📸 מה לצלם? (הרשימה)
+                </h2>
+                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
                     <video muted autoplay loop playsinline aria-label="וידאו הדרכה: רשימת צילום">
                         <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287885/IMG_2633_mmorjq.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="md:w-1/2 p-8 flex flex-col">
-                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                        <span aria-hidden="true" class="bg-accent text-sm font-black w-8 h-8 rounded-full flex items-center justify-center">5</span>
-                        צילום הגיליון (Checklist)
-                    </h2>
-                    <p class="text-gray-400 text-sm mb-4 italic leading-relaxed">הבעה ניטרלית, פה סגור, מבט לעדשה. צלם 7 תמונות סטילס:</p>
-                    <div class="grid grid-cols-2 gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter">
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">פנים: פרונט</div>
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">פנים: צד ימין</div>
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">פנים: צד שמאל</div>
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">גוף: פרונט</div>
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">גוף: גב</div>
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">גוף: צד ימין</div>
-                        <div class="p-2 bg-gray-800 rounded-lg text-center">גוף: צד שמאל</div>
+                <div class="text-slate-700">
+                    <p class="text-base mb-4 font-bold bg-indigo-50 p-3 rounded-lg text-indigo-900 border border-indigo-100">חשוב: הישארו עם הבעת פנים רגילה (ניטרלית), פה סגור, ומבט ישר לעדשה. צלמו 7 תמונות לפי הרשימה הבאה:</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-bold">
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">👤 פנים: קדימה</div>
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">👤 פנים: פרופיל ימין</div>
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">👤 פנים: פרופיל שמאל</div>
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: קדימה</div>
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: גב</div>
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: צד ימין</div>
+                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: צד שמאל</div>
                     </div>
                 </div>
             </article>
 
         </section>
 
-        <section aria-labelledby="upload-section-heading" class="w-full max-w-4xl px-6 my-24">
-            <div class="glass-panel rounded-3xl p-10 text-center shadow-2xl border-t-4 border-[#ccff00]">
-                <h2 id="upload-section-heading" class="text-3xl font-black mb-4">מוכן? העלה את התוצאות</h2>
-                <p class="text-gray-400 mb-10 max-w-xl mx-auto">לאחר שהעלית את התמונות, הן יישלחו למייל האישי שלך. משם תוכל להעלות אותן ישירות ל-Soul ID ב-Higgsfield.</p>
+        <section aria-labelledby="upload-section-heading" class="w-full max-w-2xl px-6 my-16">
+            <div class="bg-white rounded-3xl p-8 text-center card-shadow border-t-4 border-indigo-500">
+                <h2 id="upload-section-heading" class="text-3xl font-black mb-3 text-indigo-950">🚀 סיימתם? בואו נעלה את התמונות!</h2>
+                <p class="text-slate-600 mb-8 font-medium">העלו את 7 התמונות שצילמתם לכאן, והן יישלחו אליכם ישר למייל מוכנות לשימוש ב-AI.</p>
                 
-                <div class="w-full bg-black rounded-2xl overflow-hidden min-h-[500px] border border-gray-800 shadow-inner" aria-label="טופס העלאת תמונות Jotform">
-                    <div class="flex items-center justify-center h-full text-gray-600 italic">
-                        [ כאן יוטמע קוד ה-iframe של Jotform ]
-                    </div>
+                <div class="w-full bg-slate-50 rounded-2xl overflow-hidden min-h-[400px] border border-slate-200 shadow-inner flex items-center justify-center" aria-label="טופס העלאת תמונות Jotform">
+                    <span class="text-slate-400 font-medium">✨ [ כאן יוטמע קוד ה-iframe של Jotform ] ✨</span>
                 </div>
             </div>
         </section>
