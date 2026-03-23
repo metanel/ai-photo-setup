@@ -13,7 +13,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="יוצרים את דף הדמות שלכם (AI) 🎨">
-    <meta property="og:description" content="כך תצלמו את עצמכם בקלות עבור בינה מלאכותית. מדריך וידאו קצר וידידותי לכל המשפחה.">
+    <meta property="og:description" content="כך תצלמו את עצמכם בקלות עבור בינה מלאכותית. מדריך פשוט וידידותי לכל המשפחה.">
     <meta property="og:image" content="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/placeholder_og.jpg">
     <meta property="og:image:alt" content="תצוגה מקדימה של המדריך לצילום רפרנס">
     <meta property="og:url" content="https://yourdomain.com/">
@@ -24,22 +24,20 @@
     <style>
         body { 
             font-family: 'Heebo', sans-serif; 
-            background-color: #F8FAFC; /* רקע בהיר ורך (Slate 50) */
-            color: #1E293B; /* טקסט כהה לקריאות מקסימלית (Slate 800) */
+            background-color: #F8FAFC; 
+            color: #1E293B; 
             scroll-behavior: smooth; 
         }
         .card-shadow {
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
         }
-        .bg-accent-light { background-color: #EEF2FF; color: #4F46E5; } /* תכלת-סגול רך לאלמנטים בולטים */
+        .bg-accent-light { background-color: #EEF2FF; color: #4F46E5; } 
         .border-accent { border-color: #818CF8; }
-        video { 
-            border-radius: 1.25rem; 
-            width: 100%; 
-            height: auto; 
-            aspect-ratio: 9/16; 
-            object-fit: cover; 
-            background: #E2E8F0; 
+        .img-placeholder {
+            background-color: #E2E8F0;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 1rem;
         }
     </style>
     
@@ -161,7 +159,7 @@
             <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-medium">המדריך המלא, הפשוט והידידותי לצילום עצמי מושלם עבור אימון הבינה המלאכותית שלכם.</p>
         </header>
 
-        <section aria-labelledby="camera-settings-heading" class="w-full max-w-2xl px-6 mb-10">
+        <section aria-labelledby="camera-settings-heading" class="w-full max-w-3xl px-6 mb-16">
             <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
                 <h2 id="camera-settings-heading" class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
                     <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">1</span>
@@ -203,96 +201,151 @@
             </div>
         </section>
 
-        <section aria-label="שלבי צילום מצולמים" class="w-full max-w-2xl px-6 space-y-10">
+        <section aria-label="הנחיות צילום" class="w-full max-w-3xl px-6 space-y-16">
             
-            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+            <div class="flex flex-col gap-6">
+                <h2 class="text-2xl font-bold flex items-center gap-3 text-indigo-950">
                     <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">2</span>
                     ☀️ התאורה והסביבה
                 </h2>
-                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
-                    <video muted autoplay loop playsinline aria-label="וידאו הדרכה: התאורה והסביבה">
-                        <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774295856/IMG_2639_fevrxj.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="text-slate-700">
-                    <p class="text-lg font-medium mb-4">עמדו מול חלון גדול בשעות היום (בלי שמש ישירה לעיניים) כשמאחוריכם קיר חלק. סובבו את הפנים טיפה הצידה (בזווית של 45 מעלות) אל החלון.</p>
-                    <div class="bg-slate-50 border-r-4 border-amber-400 p-4 rounded-xl text-sm">
-                        <strong class="text-amber-700 block mb-1 text-base">למה זה כל כך חשוב? 🤔</strong>
-                        תאורה אחידה וטבעית מונעת צללים קשים (למשל מתחת לאף). ה-AI עלול להתבלבל ולחשוב שהצל הוא חלק ממבנה הפנים שלכם!
+                
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-green-500 ring-4 ring-green-50 flex flex-col md:flex-row gap-6">
+                    <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/do_lighting.jpg" alt="אדם עומד בזווית 45 מעלות לחלון מואר ורקע נקי" class="img-placeholder md:w-1/2 aspect-[4/3]">
+                    <div class="md:w-1/2 flex flex-col justify-center text-slate-700">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">✅ ככה עושים את זה נכון!</h3>
+                        <p class="font-medium mb-3">עמדו מול חלון גדול בשעות היום (בלי שמש ישירה לעיניים) כשמאחוריכם קיר חלק. סובבו את הפנים מעט (זווית של 45 מעלות) אל החלון.</p>
+                        <p class="text-sm bg-green-50 text-green-800 p-3 rounded-xl">תאורה אחידה ורכה מונעת מה-AI להתבלבל מצללים קשים ולחשוב שהם חלק ממבנה הפנים שלכם.</p>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-red-500 ring-4 ring-red-50 flex flex-col gap-4">
+                    <h3 class="text-xl font-bold text-red-700 mb-1">❌ ממה כדאי להימנע?</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_lighting_1.jpg" alt="תאורה חצויה עם צל קשה" class="img-placeholder aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">חצי פנים בצל (דרמטי מדי)</p>
+                        </div>
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_lighting_2.jpg" alt="סנוור חזק של שמש" class="img-placeholder aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">סנוור שמש חזק</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_lighting_3.jpg" alt="תאורה אחורית וצללית" class="img-placeholder aspect-square md:aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">חלון מאחוריכם (צללית חשוכה)</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <h2 class="text-2xl font-bold flex items-center gap-3 text-indigo-950">
                     <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">3</span>
                     ⚙️ הגדרות הצילום בטלפון
                 </h2>
-                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
-                    <video muted autoplay loop playsinline aria-label="וידאו הדרכה: הגדרות צילום טכניות">
-                        <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287885/IMG_2631_seo92e.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="text-slate-700">
-                    <ul class="space-y-2 mb-4 text-lg font-medium">
-                        <li>✅ <strong>מצלמה אחורית בלבד:</strong> היא הרבה יותר איכותית ממצלמת הסלפי.</li>
-                        <li>✅ <strong>לכבות Live Photo:</strong> אנחנו צריכים תמונה רגילה ונקייה.</li>
-                        <li>✅ <strong>בלי אפקט מראה (Mirror):</strong> צלמו רגיל, כמו שהעולם רואה אתכם.</li>
-                    </ul>
-                    <div class="bg-slate-50 border-r-4 border-amber-400 p-4 rounded-xl text-sm">
-                        <strong class="text-amber-700 block mb-1 text-base">למה בלי מראה? 🤔</strong>
-                        הפנים שלנו לא סימטריות לחלוטין. אם נהפוך את התמונה, ה-AI ישים נקודות חן או תווי פנים בצד ההפוך, וזה ייראה פשוט "לא אתם".
+                
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-green-500 ring-4 ring-green-50 flex flex-col md:flex-row gap-6">
+                    <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/do_settings.jpg" alt="צילום במצלמה אחורית ללא אפקט מראה" class="img-placeholder md:w-1/2 aspect-[4/3]">
+                    <div class="md:w-1/2 flex flex-col justify-center text-slate-700">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">✅ ההגדרות הנכונות</h3>
+                        <ul class="space-y-2 font-medium mb-3">
+                            <li>1. <strong>מצלמה אחורית בלבד:</strong> יותר איכותית ממצלמת הסלפי.</li>
+                            <li>2. <strong>לכבות Live Photo:</strong> לתמונה נקייה וחדה.</li>
+                            <li>3. <strong>בלי אפקט מראה:</strong> צלמו כמו שהעולם רואה אתכם.</li>
+                        </ul>
+                        <p class="text-sm bg-green-50 text-green-800 p-3 rounded-xl">הפנים לא סימטריות. היפוך מראה יגרום ל-AI לשים מאפיינים בצד הלא נכון של הפנים!</p>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-red-500 ring-4 ring-red-50 flex flex-col gap-4">
+                    <h3 class="text-xl font-bold text-red-700 mb-1">❌ ממה כדאי להימנע?</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_settings_1.jpg" alt="שימוש במצלמת סלפי קרובה" class="img-placeholder aspect-video mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">מצלמת סלפי (מעוותת את האף)</p>
+                        </div>
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_settings_2.jpg" alt="הפעלת אפקט מראה באפליקציה" class="img-placeholder aspect-video mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">הפעלת אפקט מראה (Mirror)</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <h2 class="text-2xl font-bold flex items-center gap-3 text-indigo-950">
                     <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">4</span>
                     📏 גובה וקיבוע המכשיר
                 </h2>
-                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
-                    <video muted autoplay loop playsinline aria-label="וידאו הדרכה: גובה וקיבוע המכשיר">
-                        <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287885/IMG_2632_r3p0i1.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="text-slate-700">
-                    <p class="text-lg font-medium mb-4">שימו את המצלמה <strong>בדיוק בגובה העיניים שלכם</strong> (אפשר להניח על ערימת ספרים). הפעילו טיימר של 10 שניות כדי שתוכלו לעמוד יציב בלי לזוז.</p>
-                    <div class="bg-slate-50 border-r-4 border-amber-400 p-4 rounded-xl text-sm">
-                        <strong class="text-amber-700 block mb-1 text-base">למה בגובה העיניים? 🤔</strong>
-                        המחשב לומד את מבנה הראש שלכם. צילום מלמטה יעשה לכם סנטר גדול מדי, וצילום מלמעלה יגדיל את המצח. אנחנו רוצים פרופורציות אמיתיות.
+                
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-green-500 ring-4 ring-green-50 flex flex-col md:flex-row gap-6">
+                    <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/do_height.jpg" alt="טלפון מקובע בגובה העיניים" class="img-placeholder md:w-1/2 aspect-[4/3]">
+                    <div class="md:w-1/2 flex flex-col justify-center text-slate-700">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">✅ יציבות וגובה נכון</h3>
+                        <p class="font-medium mb-3">שימו את המצלמה <strong>בדיוק בגובה העיניים שלכם</strong> (אפשר להניח על ערימת ספרים או חצובה). הפעילו טיימר של 10 שניות כדי לעמוד יציב בלי לזוז.</p>
+                        <p class="text-sm bg-green-50 text-green-800 p-3 rounded-xl">שמירה על גובה העיניים מבטיחה פרופורציות אמיתיות בלי להגדיל את הסנטר או המצח.</p>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent flex flex-col">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-950">
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-red-500 ring-4 ring-red-50 flex flex-col gap-4">
+                    <h3 class="text-xl font-bold text-red-700 mb-1">❌ ממה כדאי להימנע?</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_height_1.jpg" alt="צילום מזווית נמוכה" class="img-placeholder aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">זווית נמוכה (סנטר כפול)</p>
+                        </div>
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_height_2.jpg" alt="צילום מזווית גבוהה" class="img-placeholder aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">זווית גבוהה (מצח ענק)</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_height_3.jpg" alt="החזקת הטלפון ביד" class="img-placeholder aspect-square md:aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">החזקה ביד (רעידות)</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <h2 class="text-2xl font-bold flex items-center gap-3 text-indigo-950">
                     <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">5</span>
                     📸 מה לצלם? (הרשימה)
                 </h2>
-                <div class="mb-5 w-full rounded-2xl overflow-hidden bg-slate-100">
-                    <video muted autoplay loop playsinline aria-label="וידאו הדרכה: רשימת צילום">
-                        <source src="https://res.cloudinary.com/dhkn7tjxq/video/upload/f_auto,q_auto,ac_none/v1774287885/IMG_2633_mmorjq.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="text-slate-700">
-                    <p class="text-base mb-4 font-bold bg-indigo-50 p-3 rounded-lg text-indigo-900 border border-indigo-100">חשוב: הישארו עם הבעת פנים רגילה (ניטרלית), פה סגור, ומבט ישר לעדשה. צלמו 7 תמונות לפי הרשימה הבאה:</p>
-                    <div class="grid grid-cols-2 gap-3 text-sm font-bold">
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">👤 פנים: קדימה</div>
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">👤 פנים: פרופיל ימין</div>
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">👤 פנים: פרופיל שמאל</div>
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: קדימה</div>
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: גב</div>
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: צד ימין</div>
-                        <div class="p-3 bg-slate-100 border border-slate-200 rounded-xl text-center shadow-sm">🧍 גוף מלא: צד שמאל</div>
+                
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-green-500 ring-4 ring-green-50 flex flex-col md:flex-row gap-6">
+                    <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/do_poses.jpg" alt="אדם עומד בתנוחה ניטרלית וישרה" class="img-placeholder md:w-1/2 aspect-[4/3]">
+                    <div class="md:w-1/2 flex flex-col justify-center text-slate-700">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">✅ התנוחה הנכונה</h3>
+                        <p class="font-bold bg-green-50 p-3 rounded-lg text-green-900 border border-green-100 mb-3">הישארו עם הבעת פנים ניטרלית, פה סגור, ומבט ישר לעדשה.</p>
+                        <p class="font-medium text-sm mb-2">צלמו 7 תמונות לפי הרשימה הבאה:</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+                            <div class="p-2 bg-slate-50 border border-slate-200 rounded text-center">פנים: קדימה / ימין / שמאל</div>
+                            <div class="p-2 bg-slate-50 border border-slate-200 rounded text-center">גוף: קדימה / גב / ימין / שמאל</div>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-red-500 ring-4 ring-red-50 flex flex-col gap-4">
+                    <h3 class="text-xl font-bold text-red-700 mb-1">❌ ממה כדאי להימנע?</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_poses_1.jpg" alt="אדם מחייך עם שיניים" class="img-placeholder aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">חיוך / שיניים חשופות</p>
+                        </div>
+                        <div>
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_poses_2.jpg" alt="הטיית ראש הצידה" class="img-placeholder aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">הטיית ראש זוויתית</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/dont_poses_3.jpg" alt="תנוחת גוף מוסתרת" class="img-placeholder aspect-square md:aspect-square mb-2">
+                            <p class="text-xs font-bold text-slate-600 text-center">ידיים בכיסים / הסתרת הגוף</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
         </section>
 
-        <section aria-labelledby="upload-section-heading" class="w-full max-w-2xl px-6 my-16">
+        <section aria-labelledby="upload-section-heading" class="w-full max-w-3xl px-6 my-16">
             <div class="bg-white rounded-3xl p-8 text-center card-shadow border-t-4 border-indigo-500">
                 <h2 id="upload-section-heading" class="text-3xl font-black mb-3 text-indigo-950">🚀 סיימתם? בואו נעלה את התמונות!</h2>
                 <p class="text-slate-600 mb-8 font-medium">העלו את 7 התמונות שצילמתם לכאן, והן יישלחו אליכם ישר למייל מוכנות לשימוש ב-AI.</p>
