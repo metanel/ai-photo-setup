@@ -639,9 +639,40 @@
                             <li><strong>רזולוציה:</strong> אל תחתכו (Crop) ואל תכווצו. העלו את התמונות ברזולוציית המקור שלהן מהסמארטפון.</li>
                         </ul>
                     </div>
-                    
-                    <div class="mt-2 text-xs text-slate-500">
-                        מקור להעמקה טכנית באימון מודלי סביבה ו-LoRA: <a href="https://civitai.com/articles/12789/training-a-character-lora-from-a-character-sheet" class="text-indigo-600 underline font-medium" target="_blank" rel="noopener noreferrer">Training LoRA Guidelines (Civitai)</a>
+                </article>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <h2 class="text-2xl font-bold flex items-center gap-3 text-indigo-950">
+                    <span aria-hidden="true" class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">13</span>
+                    ⚠️ אתגר העקביות: מניעת שינויי צורה והזיות
+                </h2>
+
+                <article class="bg-white rounded-3xl p-6 shadow-lg border-2 border-amber-400 ring-4 ring-amber-50 flex flex-col gap-6">
+                    <div class="text-slate-700 text-sm font-medium mb-2">
+                        <p>מערכות AI מתייחסות לכל יצירת תמונה כאירוע נפרד וחדש, ונשענות אך ורק על המידע שסופק להן כדי להבין מה קיים בסביבה. כדי לייצר סט תמונות אחיד לחלוטין של אותה סביבה ולמנוע שגיאות ברינדור החלל, חובה ליישם את הפעולות הבאות:</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-100">
+                            <h4 class="font-bold text-amber-900 text-base mb-2">כיסוי החלל הריק למניעת הזיות (Hallucinations)</h4>
+                            <p class="text-sm text-slate-700">כאשר מאמנים מודל סביבה (במיוחד בשיטה המפוצלת), המטרה היא להקנות ל-AI הבנה היקפית של 360 מעלות. אם תספקו רק תמונות הממוקדות באובייקטים (כגון רהיטים), המודל "ילמד" שהאובייקטים הללו הם הדבר היחיד שקיים בחלל. כתוצאה מכך, כאשר ינסה ליצור תמונה מזווית שבה האובייקט אינו אמור להופיע, הוא עלול "להזות" ולהכניס אותו לשם שוב ושוב בטעות. כדי שהמודל יבין כיצד באמת נראה המקום, חובה לספק לו "הוכחות ויזואליות" של החלל עצמו, באמצעות הוספת צילומים של קירות ריקים, רקע או מרחב נקי לחלוטין מנוכחות האובייקטים המרכזיים.</p>
+                        </div>
+
+                        <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-100">
+                            <h4 class="font-bold text-amber-900 text-base mb-2">יצירת עוגן ויזואלי (Image Reference) בכלים גנרטיביים</h4>
+                            <p class="text-sm text-slate-700">במידה ואתם מייצרים את הלוקיישן באמצעות כלי בינה מלאכותית יוצרי תמונות (כמו Nano Banana 2 וכו'): אל תייצרו את כל הזוויות במקביל. צרו תחילה רק את תמונת "נקודת העוגן" (לרוב החזית). לאחר שהגעתם לעיצוב הרצוי והמדויק, הזינו את התמונה הזו חזרה למערכת כ-Style/Image Reference עבור כל שאר הזוויות. פעולה זו מעגנת את האסתטיקה (הטקסטורות, הצבעים והעיצוב).</p>
+                        </div>
+
+                        <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-100">
+                            <h4 class="font-bold text-amber-900 text-base mb-2">סנכרון ההנחיה הטקסטואלית לרפרנס (Micro-Prompting)</h4>
+                            <p class="text-sm text-slate-700">תמונת רפרנס לבדה אינה מספיקה. היא משפיעה על הסגנון אך לא בהכרח על המיקום והלוגיקה במרחב. חובה לעדכן את כל ההנחיות (Prompts) הבאות כך שיתארו במפורש את המצב שנוצר בתמונת העוגן, ולשלול אלמנטים לא רצויים (Negative Prompting). לדוגמה: אם בתמונת העוגן הטלוויזיה מונחת על הרצפה, הוסיפו לכל ההנחיות הבאות את התיאור: <em>"הטלוויזיה מונחת ישירות על הרצפה, ללא שולחן וללא מעמד עץ"</em>. הטקסט מעגן את הלוגיקה המבנית, בעוד הרפרנס מעגן את המראה.</p>
+                        </div>
+
+                        <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-100">
+                            <h4 class="font-bold text-amber-900 text-base mb-2">נעילת ה-Seed (זרע אקראיות)</h4>
+                            <p class="text-sm text-slate-700">במידה והמערכת מאפשרת זאת, אתרו את מספר ה-Seed של התמונה הראשונה המוצלחת, והגדירו אותו ידנית בכל שאר ההנחיות של אותו החדר. שימוש ב-Seed זהה מבטיח שהמודל מתחיל את תהליך הרינדור מאותה נקודת פתיחה מתמטית, מה שמסייע דרמטית בשמירה על עקביות של טקסטורות ורעש חזותי.</p>
+                        </div>
                     </div>
                 </article>
             </div>
